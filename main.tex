@@ -1,0 +1,100 @@
+%% Formato para la presentaci\'on de  proyectos de grado.
+%% Maestría en Ingeniería de Software
+%% Pontificia Universidad Javeriana
+%% Elaborado por Angela Villota y Luisa Rincón
+%% Inspirado en Formato elaborado para carrera de Ing de Sistemas
+%% V 1.0 Abril - 2025
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{titling}
+\usepackage{setspace}
+\usepackage{graphicx}
+\graphicspath{{img/}} %ruta de la carpeta en donde estaràn las imágenes
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage[style=apa, backend=biber, language=spanish,
+            uniquename=false, uniquelist=false,
+            mincrossrefs=200]{biblatex}
+\addbibresource{bibfile.bib}
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{dblfloatfix}
+\usepackage{todonotes}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+
+\onehalfspacing
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+\renewcommand{\maketitlehooka}{\null\mbox{}
+\vfill}
+\renewcommand{\maketitlehookd}{\vfill
+\null}
+
+\begin{document}
+    %crear titulo
+    %\maketitle
+
+    %%%%%%%%%%%%%%%%%
+    % Portada del Anteproyecto
+    %%%%%%%%%%%%%%%%%
+    \input{src/00-titulo}
+    \newpage
+    %%%%%%%%%%%%%%%%%
+    % Ficha resumen
+    %%%%%%%%%%%%%%%%%
+    \input{src/00-resumen}
+    \newpage
+
+    %%%%%%%%%%%%%%%%%
+    % Indices y tablas
+    %%%%%%%%%%%%%%%%%
+
+    \tableofcontents
+    \listoffigures \listoftables
+    \newpage
+    \listoftodos
+    \newpage
+
+    %% Problema
+    \input{src/1-problema}
+
+    %% Objetivos
+    \input{src/2-objetivos}
+    %% Alcance
+    \input{src/3-alcance}
+    \newpage
+
+    %% Marco conceptual
+    \input{src/5-marco}
+
+    %% Riesgos éticos
+    \input{src/7-riesgos eticos}
+
+    %% Metodología
+    \input{src/6-metodologia}
+
+    %% Cronograma
+    \input{src/8-cronograma}
+    \newpage
+    \input{src/9-referencias}
+    \printbibliography
+
+    \newpage
+\end{document}

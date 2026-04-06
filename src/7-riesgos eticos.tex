@@ -1,0 +1,55 @@
+\section{Riesgos Éticos}
+
+El desarrollo de un mecanismo automatizado para la gobernanza técnica en PyMES conlleva
+implicaciones éticas centradas en la privacidad, la equidad algorítmica y el
+impacto sociotécnico en los equipos de desarrollo.
+
+\begin{itemize}
+    \item \textbf{Protección de información sensible:} El análisis estático
+        requiere acceso directo al código fuente, el cual constituye el activo más
+        valioso de una PyME. Existe el riesgo de exposición de lógica de negocio
+        o secretos industriales si los grafos de dependencia no se manejan bajo
+        protocolos de confidencialidad estrictos \parencite{Hamed2023, LAIG2025}.
+
+    \item \textbf{Sesgo algorítmico y falta de transparencia:} Los modelos de
+        aprendizaje automático utilizados para calcular índices como el ATDI
+        pueden presentar sesgos si los datos de entrenamiento no son
+        representativos o si se basan en umbrales arbitrarios \parencite{SasAvgeriou}.
+        Un diagnóstico erróneo de la severidad de un \textit{smell} podría llevar
+        a decisiones de refactorización costosas e innecesarias \parencite{SasAvgeriou}.
+
+    \item \textbf{Impacto social y moral del equipo:} La deuda técnica tiene un
+        impacto documentado y negativo en la moral de los desarrolladores
+        \parencite{Hamed2023}. La automatización de la gobernanza corre el
+        riesgo de ser percibida como una herramienta de vigilancia punitiva en
+        lugar de un soporte técnico, lo que podría aumentar el estrés laboral si
+        los resultados se utilizan para evaluaciones de desempeño individual sin
+        considerar el contexto del negocio \parencite{Hamed2023, PaulWang2019}.
+
+    \item \textbf{Riesgo de formalismo vacío:} Existe la posibilidad de que los
+        equipos traten las \textit{Fitness Functions} como un simple trámite burocrático
+        (marcar casillas), ignorando la evaluación cŕıtica del diseño por
+        cumplir con una métrica de conformidad (CR) automatizada \parencite{LAIG2025}.
+
+    \item \textbf{Veracidad del diagnóstico y alcance parametrizable de la
+        herramienta:} La Tasa de Conformidad (CR) producida por el mecanismo es
+        un indicador \textit{circunscrito exclusivamente a las reglas
+        configuradas} en el prototipo, las cuales se limitan a las tres
+        dimensiones explicitadas en el alcance del proyecto: integridad de capas,
+        ausencia de ciclos de dependencia y cumplimiento de convenciones de
+        nomenclatura. El riesgo ético consiste en que directivos, auditores o
+        equipos de desarrollo interpreten una CR elevada como sinónimo de
+        arquitectura completa y correctamente gobernada, cuando en realidad solo
+        certifica el cumplimiento de las reglas programadas sobre el ecosistema evaluado.
+        Esta confusión puede generar una falsa sensación de control, inhibir revisiones
+        manuales complementarias y llevar a decisiones de inversión o despliegue
+        basadas en información parcial. Para mitigar este riesgo, el prototipo deberá
+        parametrizar su alcance de forma transparente: cada reporte debe
+        declarar explícitamente qué reglas se evaluaron, sobre qué módulos y con
+        qué umbrales, acompañado de una advertencia en los resultados que
+        indique que el diagnóstico \textbf{no cubre} aspectos arquitectónicos fuera
+        del alcance declarado. Asimismo, la herramienta no debe presentarse como
+        un árbitro definitivo de la calidad arquitectónica, sino como un
+        mecanismo de detección temprana acotado a su dominio de configuración
+        \parencite{Klein2022, LAIG2025}.
+\end{itemize}

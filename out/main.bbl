@@ -1,0 +1,636 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Anthony2024}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b48d89adcf9e0be45a4bcc046fc34872}{%
+           family={Anthony},
+           familyi={A\bibinitperiod},
+           given={Emilie},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3c23541040f8b4ec66463be4a431448a}{%
+           family={Berntsson},
+           familyi={B\bibinitperiod},
+           given={Astrid},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c99047492d27e3718c4ed67eda34d0b3}{%
+           family={Santilli},
+           familyi={S\bibinitperiod},
+           given={Tiziano},
+           giveni={T\bibinitperiod}}}%
+        {{hash=91b8ba12978f1ce31c02dc21105d4612}{%
+           family={Wohlrab},
+           familyi={W\bibinitperiod},
+           given={Rebekka},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{547c7b84b8307a38bfc19945dd6a13a7}
+      \strng{fullhash}{e5168677f35978239380ea54b11258e8}
+      \strng{bibnamehash}{e5168677f35978239380ea54b11258e8}
+      \strng{authorbibnamehash}{e5168677f35978239380ea54b11258e8}
+      \strng{authornamehash}{547c7b84b8307a38bfc19945dd6a13a7}
+      \strng{authorfullhash}{e5168677f35978239380ea54b11258e8}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE 21st International Conference on Software Architecture (ICSA 2024)}
+      \field{title}{We're Drifting Apart: Architectural Drift from the Developers' Perspective}
+      \field{year}{2024}
+      \field{pages}{101\bibrangedash 111}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ICSA59870.2024.00018
+      \endverb
+    \endentry
+    \entry{ArchSyncJAndres}{article}{}
+      \name{author}{4}{}{%
+        {{hash=bbd83b84a5bea8dab0d6775b2626983d}{%
+           family={Diaz-Pace},
+           familyi={D\bibinithyphendelim P\bibinitperiod},
+           given={J\bibnamedelima Andres},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f6702cb3c0fc2c5e9bb61eec8d368749}{%
+           family={Soria},
+           familyi={S\bibinitperiod},
+           given={Alvaro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e728104374f2d3c36dde066f7e139cef}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2d671687b81a0e235e49218f433ee5fd}{%
+           family={Campo},
+           familyi={C\bibinitperiod},
+           given={Marcelo\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f51d95de3035028cf19f7d0c37ce2f5}
+      \strng{fullhash}{acee96d08cfc4b94fac7cffcea85559a}
+      \strng{bibnamehash}{acee96d08cfc4b94fac7cffcea85559a}
+      \strng{authorbibnamehash}{acee96d08cfc4b94fac7cffcea85559a}
+      \strng{authornamehash}{3f51d95de3035028cf19f7d0c37ce2f5}
+      \strng{authorfullhash}{acee96d08cfc4b94fac7cffcea85559a}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taking ArchSync to the Real World: An Analysis of Three Case-Studies}
+      \field{year}{2011}
+    \endentry
+    \entry{FitnessF}{misc}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Fitness Functions – Safeguard Architecture with Automated Checks}
+      \verb{urlraw}
+      \verb https://continuous-architecture.org/practices/fitness-functions/
+      \endverb
+      \verb{url}
+      \verb https://continuous-architecture.org/practices/fitness-functions/
+      \endverb
+    \endentry
+    \entry{Hamed2023}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d5335ac77cbe8d7213efff5c6520a08c}{%
+           family={Hamed},
+           familyi={H\bibinitperiod},
+           given={Abeer\bibnamedelimb Salah\bibnamedelima Eldeen},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=d8f0b342f6a8ed1d52320fc52ca8b15f}{%
+           family={Elbakry},
+           familyi={E\bibinitperiod},
+           given={Hazem\bibnamedelima M.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=06df66442eb5cf6cd1935209f7f0b264}{%
+           family={Riad},
+           familyi={R\bibinitperiod},
+           given={Alaa\bibnamedelima Eldin},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5e62daa37612ec7ad724b3edad3e40a4}{%
+           family={Moawad},
+           familyi={M\bibinitperiod},
+           given={Ramadan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{34fab83c426916b972c6efdfaa1f2447}
+      \strng{fullhash}{670866e1f1b984c8c1cea1036d7cdf2d}
+      \strng{bibnamehash}{670866e1f1b984c8c1cea1036d7cdf2d}
+      \strng{authorbibnamehash}{670866e1f1b984c8c1cea1036d7cdf2d}
+      \strng{authornamehash}{34fab83c426916b972c6efdfaa1f2447}
+      \strng{authorfullhash}{670866e1f1b984c8c1cea1036d7cdf2d}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Internet Services and Information Security (JISIS)}
+      \field{number}{3}
+      \field{title}{A Proposed Technical Debt Management Approach Applied on Software Projects in Egypt}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{156\bibrangedash 177}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.58346/JISIS.2023.I3.010
+      \endverb
+    \endentry
+    \entry{Jolak2025}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d02f45bbcb9e47fd61b0517b4d9f81ea}{%
+           family={Jolak},
+           familyi={J\bibinitperiod},
+           given={Rodi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=62eadeb4821344a8de7454aba93affca}{%
+           family={Karlsson},
+           familyi={K\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=298c4dfcb5b40a6ef18e454ecf7a0d81}{%
+           family={Dobslaw},
+           familyi={D\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{ec9b234b2d503196159bc053a9b66ad8}
+      \strng{fullhash}{2f69c6da00f705c7e15d05cfb4ab705c}
+      \strng{bibnamehash}{2f69c6da00f705c7e15d05cfb4ab705c}
+      \strng{authorbibnamehash}{2f69c6da00f705c7e15d05cfb4ab705c}
+      \strng{authornamehash}{ec9b234b2d503196159bc053a9b66ad8}
+      \strng{authorfullhash}{2f69c6da00f705c7e15d05cfb4ab705c}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01641212}
+      \field{journaltitle}{Journal of Systems and Software}
+      \field{month}{7}
+      \field{title}{An empirical investigation of the impact of architectural smells on software maintainability}
+      \field{volume}{225}
+      \field{year}{2025}
+      \field{pages}{112382}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jss.2025.112382
+      \endverb
+    \endentry
+    \entry{Klein2022}{report}{}
+      \name{author}{3}{}{%
+        {{hash=e62911c43b097bc36e6ba1af1da30e4d}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6dcb0281b45ca74fc574826e4d48d94a}{%
+           family={Nord},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1825e0deaadc2ce4781f0e9487d7fe14}{%
+           family={Shull},
+           familyi={S\bibinitperiod},
+           given={Forrest},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Software Engineering Institute, Carnegie Mellon University}%
+      }
+      \strng{namehash}{ab9ca5c50be3f883d0576b9b18358b78}
+      \strng{fullhash}{299f3f7e95bb8300ee82e07991adf488}
+      \strng{bibnamehash}{299f3f7e95bb8300ee82e07991adf488}
+      \strng{authorbibnamehash}{299f3f7e95bb8300ee82e07991adf488}
+      \strng{authornamehash}{ab9ca5c50be3f883d0576b9b18358b78}
+      \strng{authorfullhash}{299f3f7e95bb8300ee82e07991adf488}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{DM22-0924}
+      \field{title}{Why Architecture Conformance Matters for Software Systems}
+      \field{type}{techreport}
+      \field{year}{2022}
+    \endentry
+    \entry{OkooneAgileArchitecture}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Make your architecture agile with fitness functions | Okoone}
+      \verb{urlraw}
+      \verb https://www.okoone.com/spark/technology-innovation/make-your-architecture-agile-with-fitness-functions/
+      \endverb
+      \verb{url}
+      \verb https://www.okoone.com/spark/technology-innovation/make-your-architecture-agile-with-fitness-functions/
+      \endverb
+    \endentry
+    \entry{Manglaras2026}{article}{}
+      \name{author}{5}{}{%
+        {{hash=06b85ca338e0255aad9c2dba46561fcb}{%
+           family={Manglaras},
+           familyi={M\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=1689a6a7ccb146e7f0db0c8e0d12591c}{%
+           family={Farkas},
+           familyi={F\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=edee10fe9c44ba85714c23b76c747a79}{%
+           family={Woolford},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fc21c10b2d386c8460fa30c762643c06}{%
+           family={Treude},
+           familyi={T\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e677be29346d195622b44f23db10f01f}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f2bcac4f6871c50fc8265d20ca4be7f}
+      \strng{fullhash}{502e45b4d11037ba5b3e2dc9894f0097}
+      \strng{bibnamehash}{502e45b4d11037ba5b3e2dc9894f0097}
+      \strng{authorbibnamehash}{502e45b4d11037ba5b3e2dc9894f0097}
+      \strng{authornamehash}{9f2bcac4f6871c50fc8265d20ca4be7f}
+      \strng{authorfullhash}{502e45b4d11037ba5b3e2dc9894f0097}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{ModARO: A Modular Approach to Architecture Reconstruction of Distributed Microservice Codebases}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2602.08181v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2602.08181v1
+      \endverb
+    \endentry
+    \entry{SanMartin}{article}{}
+      \name{author}{3}{}{%
+        {{hash=cf6d4b294c41f72ea0381271be728159}{%
+           family={Martín},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima San},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d680956a616cf600ea2a09d3344c26fa}{%
+           family={Camargo},
+           familyi={C\bibinitperiod},
+           given={Valter\bibnamedelimb Vieira\bibnamedelima De},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cbba7db5fe61e1916e079c672673831c}{%
+           family={Angulo},
+           familyi={A\bibinitperiod},
+           given={Guisella},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ba81101d0af8393b1a668db2e50d5aa}
+      \strng{fullhash}{a9a20c45639f6084233aee0a7c64db7b}
+      \strng{bibnamehash}{a9a20c45639f6084233aee0a7c64db7b}
+      \strng{authorbibnamehash}{a9a20c45639f6084233aee0a7c64db7b}
+      \strng{authornamehash}{6ba81101d0af8393b1a668db2e50d5aa}
+      \strng{authorfullhash}{a9a20c45639f6084233aee0a7c64db7b}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Architectural Conformance Checking for MAPE-K-based Self-Adaptive Systems}
+    \endentry
+    \entry{LAIG2025}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5471291d58b1910e40880e4f542479a9}{%
+           family={Modawski},
+           familyi={M\bibinitperiod},
+           given={Aleksander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a5074629590e363e3d1f60b95b39535f}{%
+           family={Wolniak},
+           familyi={W\bibinitperiod},
+           given={Aleksandra},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bologna, Italy}%
+      }
+      \list{publisher}{1}{%
+        {CEUR-WS.org}%
+      }
+      \strng{namehash}{75942d6a292faf97f4b42d6d41c685db}
+      \strng{fullhash}{75942d6a292faf97f4b42d6d41c685db}
+      \strng{bibnamehash}{75942d6a292faf97f4b42d6d41c685db}
+      \strng{authorbibnamehash}{75942d6a292faf97f4b42d6d41c685db}
+      \strng{authornamehash}{75942d6a292faf97f4b42d6d41c685db}
+      \strng{authorfullhash}{75942d6a292faf97f4b42d6d41c685db}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1613-0073}
+      \field{journaltitle}{Proceedings of the European Workshop on Trustworthy AI (TRUST-AI 2025), organized as part of the European Conference of Artificial Intelligence (ECAI 2025)}
+      \field{month}{10}
+      \field{title}{Lightweight {AI} Governance ({LAIG}) Framework for {SMEs}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://ceur-ws.org/Vol-4132/short57.pdf
+      \endverb
+      \verb{url}
+      \verb https://ceur-ws.org/Vol-4132/short57.pdf
+      \endverb
+    \endentry
+    \entry{Murphy2001}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7121cd59cff9b4bd02a3b527a5bfe82d}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Gail\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=c63a539690d8b3e7857c641c0a06cbad}{%
+           family={Notkin},
+           familyi={N\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3024e43a743bbe3614b159c19f636742}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Kevin\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0e69e1566d1fd4d12d49af6f9b3a4f87}
+      \strng{fullhash}{fe6f8a26eea037adc644599804dd6e6d}
+      \strng{bibnamehash}{fe6f8a26eea037adc644599804dd6e6d}
+      \strng{authorbibnamehash}{fe6f8a26eea037adc644599804dd6e6d}
+      \strng{authornamehash}{0e69e1566d1fd4d12d49af6f9b3a4f87}
+      \strng{authorfullhash}{fe6f8a26eea037adc644599804dd6e6d}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Software Engineering}
+      \field{number}{4}
+      \field{title}{Software Reflexion Models: Bridging the Gap between Source and High-Level Models}
+      \field{volume}{27}
+      \field{year}{2001}
+      \field{pages}{364\bibrangedash 380}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/32.908994
+      \endverb
+    \endentry
+    \entry{NiessenMedium}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f4223ed4abe3b4f18ec0975248c579a8}{%
+           family={Niessen},
+           familyi={N\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4223ed4abe3b4f18ec0975248c579a8}
+      \strng{fullhash}{f4223ed4abe3b4f18ec0975248c579a8}
+      \strng{bibnamehash}{f4223ed4abe3b4f18ec0975248c579a8}
+      \strng{authorbibnamehash}{f4223ed4abe3b4f18ec0975248c579a8}
+      \strng{authornamehash}{f4223ed4abe3b4f18ec0975248c579a8}
+      \strng{authorfullhash}{f4223ed4abe3b4f18ec0975248c579a8}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fitness Functions: Automating Your Architecture Decisions | by Lukas Niessen | Feb, 2026 | Medium}
+      \verb{urlraw}
+      \verb https://lukasniessen.medium.com/fitness-functions-automating-your-architecture-decisions-08b2fe4e5f34
+      \endverb
+      \verb{url}
+      \verb https://lukasniessen.medium.com/fitness-functions-automating-your-architecture-decisions-08b2fe4e5f34
+      \endverb
+    \endentry
+    \entry{PaulWang2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=02ea6c7e567055ca5a71f4420582b259}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Paula},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0fd44f468fd94158105f88db3913dcac}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Rosemary},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{16ad8b2d3e4087ba7d6a8bd19cb88ab4}
+      \strng{fullhash}{16ad8b2d3e4087ba7d6a8bd19cb88ab4}
+      \strng{bibnamehash}{16ad8b2d3e4087ba7d6a8bd19cb88ab4}
+      \strng{authorbibnamehash}{16ad8b2d3e4087ba7d6a8bd19cb88ab4}
+      \strng{authornamehash}{16ad8b2d3e4087ba7d6a8bd19cb88ab4}
+      \strng{authorfullhash}{16ad8b2d3e4087ba7d6a8bd19cb88ab4}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Thoughtworks}
+      \field{month}{1}
+      \field{title}{Fitness function-driven development}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.thoughtworks.com/insights/articles/fitness-function-driven-development
+      \endverb
+      \verb{url}
+      \verb https://www.thoughtworks.com/insights/articles/fitness-function-driven-development
+      \endverb
+    \endentry
+    \entry{Pigazzini2021}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9f874007bc08055e2dae2f88c4cdd585}{%
+           family={Pigazzini},
+           familyi={P\bibinitperiod},
+           given={Ilaria},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Università degli Studi di Milano-Bicocca}%
+      }
+      \strng{namehash}{9f874007bc08055e2dae2f88c4cdd585}
+      \strng{fullhash}{9f874007bc08055e2dae2f88c4cdd585}
+      \strng{bibnamehash}{9f874007bc08055e2dae2f88c4cdd585}
+      \strng{authorbibnamehash}{9f874007bc08055e2dae2f88c4cdd585}
+      \strng{authornamehash}{9f874007bc08055e2dae2f88c4cdd585}
+      \strng{authorfullhash}{9f874007bc08055e2dae2f88c4cdd585}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Evaluating and Detecting Architecture Erosion}
+      \field{type}{PhD Thesis}
+      \field{year}{2021}
+    \endentry
+    \entry{SasAvgeriou}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2f3d19a3c34a38fdb376d276b28c2b0f}{%
+           family={Sas},
+           familyi={S\bibinitperiod},
+           given={Darius},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c526947bff4f91d727e5b4dd9e8003d3}{%
+           family={Avgeriou},
+           familyi={A\bibinitperiod},
+           given={Paris},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{9f646f6ffebecc366e2803d5177e27c3}
+      \strng{fullhash}{9f646f6ffebecc366e2803d5177e27c3}
+      \strng{bibnamehash}{9f646f6ffebecc366e2803d5177e27c3}
+      \strng{authorbibnamehash}{9f646f6ffebecc366e2803d5177e27c3}
+      \strng{authornamehash}{9f646f6ffebecc366e2803d5177e27c3}
+      \strng{authorfullhash}{9f646f6ffebecc366e2803d5177e27c3}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Bernoulli Institute, University of Groningen}
+      \field{title}{An architectural technical debt index based on machine learning and architectural smells}
+      \field{year}{2022}
+    \endentry
+    \entry{Sas2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2f3d19a3c34a38fdb376d276b28c2b0f}{%
+           family={Sas},
+           familyi={S\bibinitperiod},
+           given={Darius},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c526947bff4f91d727e5b4dd9e8003d3}{%
+           family={Avgeriou},
+           familyi={A\bibinitperiod},
+           given={Paris},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9daeec4aa87c630c340993fe0184cfec}{%
+           family={Fontana},
+           familyi={F\bibinitperiod},
+           given={Francesca\bibnamedelima Arcelli},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{237490d0e2f2a3a15154eeb45aad33c9}
+      \strng{fullhash}{ab9d90e4e010eed60a67713d123cf944}
+      \strng{bibnamehash}{ab9d90e4e010eed60a67713d123cf944}
+      \strng{authorbibnamehash}{ab9d90e4e010eed60a67713d123cf944}
+      \strng{authornamehash}{237490d0e2f2a3a15154eeb45aad33c9}
+      \strng{authorfullhash}{ab9d90e4e010eed60a67713d123cf944}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2019 IEEE International Conference on Software Maintenance and Evolution (ICSME)}
+      \field{title}{Investigating Instability Architectural Smells Evolution: An Exploratory Case Study}
+      \field{year}{2019}
+      \field{pages}{557\bibrangedash 567}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ICSME.2019.00090
+      \endverb
+    \endentry
+    \entry{Djmiit}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Transforming enterprise architecture into a decision infrastructure – Djimit van data naar doen.}
+      \verb{urlraw}
+      \verb https://djimit.nl/transforming-enterprise-architecture-into-a-decision-infrastructure/
+      \endverb
+      \verb{url}
+      \verb https://djimit.nl/transforming-enterprise-architecture-into-a-decision-infrastructure/
+      \endverb
+    \endentry
+    \entry{ArchUnit}{misc}{}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Unit test your Java architecture - ArchUnit}
+      \verb{urlraw}
+      \verb https://www.archunit.org/
+      \endverb
+      \verb{url}
+      \verb https://www.archunit.org/
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{DaSilvaCosta2022}
+  \missing{Glorot2011}
+\endrefsection
+\endinput
+

@@ -1,0 +1,16 @@
+\section{Objetivos del proyecto}
+
+
+\subsection{Objetivo General}
+Desarrollar un mecanismo automatizado para la detección de derivas arquitectónicas, basado en grafos de dependencia y la ejecución de funciones de fitness, eliminando la dependencia de documentación externa para garantizar la integridad estructural en proyectos de software de PyMES.
+
+
+\subsection{Objetivos específicos}
+
+\begin{enumerate}
+    \item Definir un conjunto de Fitness Functions basadas en el análisis de smells arquitectonicos más comunes (acoplamiento eferente, ciclos y violación de capas) adaptadas a entornos de desarrollo ágil.
+    \item Implementar un componente de análisis estático que genere automáticamente grafos de dependencia y topologías de componentes a partir del código fuente y de archivos de configuración, usando una herramienta propietaria.
+    \item Construir un motor de validación que compare el grafo extraído con las reglas definidas, calculando una \textbf{Tasa de Conformidad (CR)} automatizada en ciertos aspectos definidos.
+    \item Evaluar el mecanismo en un proyecto en condiciones controladas, analizando su capacidad para identificar los smells arquitectonicos comunes y determinar su efectividad en proyectos de software de PyMES.
+
+\end{enumerate}

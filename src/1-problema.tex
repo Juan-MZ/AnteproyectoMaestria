@@ -1,0 +1,14 @@
+\section{Planteamiento y Justificación del Problema}
+
+\subsection{Planteamiento del Problema:}
+En el ecosistema actual de desarrollo de software, la arquitectura ha dejado de ser un plano estático para convertirse en una entidad dinámica que evoluciona en cada iteración. Este dinamismo da origen a la deriva arquitectónica (architecture drift), definida como la divergencia progresiva entre la arquitectura planeada (prescrita) y la arquitectura realmente implementada en el código fuente (actual) \parencite{SanMartin}.
+  
+La investigación indica que aproximadamente el 65\% del presupuesto de TI de una organización se consume exclusivamente en el mantenimiento de software, a menudo debido a problemas inducidos por la erosión arquitectónica. Esta erosión puede incrementar los costos de desarrollo entre un 20\% y 40\% en comparación con sistemas bien mantenidos. Sin embargo, el 80\% de las organizaciones ágiles y PyMES carecen de documentación arquitectónica actualizada, lo que invalida los métodos tradicionales de gobernanza basados en revisiones manuales o comités \parencite{Manglaras2026}.
+
+Sin mecanismos automatizados, la deriva introduce "smells" estructurales como dependencias cíclicas, componentes "Dios" (God Components) y violaciones de capas, que elevan el Índice de Deuda Arquitectónica (ADI)\parencite{Djmiit}. Esto lleva al "Legacy Trap", donde la complejidad acumulada impide la innovación estratégica \parencite{Djmiit}. Por tanto, existe una necesidad crítica de mecanismos que realicen una gobernanza continua basándose exclusivamente en el código fuente, transformando las reglas de diseño en Fitness Functions ejecutables \parencite{OkooneAgileArchitecture}.
+
+\subsection{Justificación del Proyecto:}
+En ausencia de un mecanismo automatizado de detección de deriva arquitectónica, las PyMES de software continúan operando bajo un modelo reactivo de gobernanza técnica, donde la arquitectura solo se revisa cuando ya existen fallos visibles en el sistema. Esta falta de visibilidad estructural genera una acumulación progresiva de desviaciones entre la arquitectura diseñada y la implementada, fenómeno que no se manifiesta inicialmente como errores funcionales, sino como deterioro silencioso de la calidad interna del sistema \parencite{Jolak2025}.
+
+El proyecto propuesto no busca prevenir fallos visibles, sino evitar que el software se convierta en un sistema rígido incapaz de adaptarse al cambio — una condición que representa uno de los principales riesgos estratégicos para las PyMES en entornos digitales altamente dinámicos.
+

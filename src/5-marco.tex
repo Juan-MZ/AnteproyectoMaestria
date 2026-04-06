@@ -1,0 +1,129 @@
+\section{Marco teórico y antecedentes}
+
+\subsection{Bases Teóricas}
+Esta sección fundamenta los conceptos pilares sobre los cuales se construye el mecanismo
+de detección automatizada.
+\begin{itemize}
+    \item \textbf{Deriva y Erosión Arquitectónica:} Se define como la
+        divergencia progresiva entre la arquitectura prescrita (planeada) y la
+        arquitectura realmente implementada en el código fuente. Este fenómeno implica
+        una pérdida de integridad estructural debido a la violación de principios
+        de diseño originales \parencite{Pigazzini2021}. La investigación reciente
+        destaca que esta divergencia es un problema persistente cuando no existen
+        acciones de contención, impactando negativamente en la mantenibilidad y
+        la capacidad de evolución del sistema \parencite{Anthony2024}. Se estima
+        que el costo del mantenimiento de software, a menudo inflado por la erosión,
+        consume aproximadamente el 65\% del presupuesto de TI de una organización
+        \parencite{Pigazzini2021}.
+
+    \item \textbf{Deuda Técnica Arquitectónica (ATD):} Es una metáfora que
+        describe las decisiones de diseño subóptimas que ofrecen beneficios a
+        corto plazo (como entregas rápidas) pero deterioran la calidad a largo
+        plazo, generando un "interés" en forma de mayor esfuerzo de mantenimiento
+        \parencite{Hamed2023}. La ATD se diferencia de la deuda a nivel de código
+        porque involucra decisiones estructurales globales como capas,
+        subsistemas e interfaces \parencite{Pigazzini2021}. Un síntoma clave de
+        su acumulación es la presencia de Smells Arquitectónicos (AS) \parencite{SasAvgeriou}.
+
+    \item \textbf{Smells Arquitectónicos (AS):} Son decisiones de diseño que
+        impactan negativamente en la calidad interna del sistema \parencite{Pigazzini2021}.
+        A diferencia de los code smells, que ocurren a nivel de métodos o clases,
+        los AS involucran múltiples componentes, paquetes o capas \parencite{SasAvgeriou}.
+        Ejemplos críticos incluyen la \textbf{Dependencia Cíclica (CD)}, donde los
+        componentes no pueden ser liberados o probados de forma aislada, y el
+        \textbf{Componente Dios (GC)}, que ocurre cuando una entidad es
+        excesivamente grande y difícil de entender \parencite{SasAvgeriou, Pigazzini2021}.
+
+    \item \textbf{Funciones de Aptitud (Fitness Functions):} Una función de
+        aptitud es un mecanismo diseñado para resumir qué tan cerca está una
+        solución de diseño específica de alcanzar sus objetivos y preservar sus
+        características clave. Se definen formalmente como "cualquier mecanismo
+        que proporciona una evaluación de integridad objetiva de alguna
+        característica arquitectónica". Su propósito fundamental es actuar como
+        barandillas (guardrails) automatizadas que comunican, validan y preservan
+        atributos de calidad (requisitos no funcionales) de manera continua,
+        asegurando que la evolución del sistema se mantenga dentro de un rango y
+        una dirección deseados por los arquitectos. Esta disciplina permite a los
+        equipos ser reactivos ante la degradación de características críticas en
+        tiempo real, evitando que la realidad del sistema en producción se
+        desvíe de las intenciones de diseño originales \parencite{FitnessF}.
+
+    \item \textbf{Análisis Estático y Grafos de Dependencia:} Es la técnica de
+        extraer hechos y abstracciones del código fuente sin ejecutarlo
+        \parencite{Pigazzini2021}. Los grafos de dependencia representan los
+        componentes del sistema como nodos y sus relaciones como aristas, permitiendo
+        aplicar algoritmos de búsqueda (como \textit{Depth First Search}) para
+        detectar estructuras problemáticas como ciclos \parencite{Pigazzini2021, Klein2022}.
+
+    \item \textbf{Algoritmos de Recorrido sobre el Grafo de Dependencias:} La
+        detección de smells arquitectónicos sobre el grafo $G=(V,E)$ requiere la
+        aplicación de algoritmos de grafos dirigidos. La \textbf{Dependencia
+        Cíclica (CD)} se detecta mediante una búsqueda en profundidad (\textit{DFS})
+        que identifica Componentes Fuertemente Conexos (SCC), clasificando un
+        subconjunto de nodos como cíclico cuando $|\text{SCC}| > 1$. La \textbf{Dependencia
+        Inestable (UD)} se calcula midiendo el acoplamiento aferente ($C_{a}$ = aristas
+        entrantes) y eferente ($C_{e}$ = aristas salientes) de cada nodo, derivando
+        la métrica $I = C_{e}\,/\,(C_{a} + C_{e})$; una relación $A \to B$
+        constituye un UD cuando el componente estable $A$ depende del inestable
+        $B$ ($I_{A} < I_{B}$). El \textbf{Componente Dios (GC)} se detecta
+        cuando el número de dependencias de salida de un paquete supera un
+        umbral configurable. \textcite{Sas2019} validaron empíricamente estas
+        métricas analizando la evolución de smells de inestabilidad en proyectos
+        Java de código abierto mediante el recorrido sistemático del grafo de
+        dependencias a nivel de paquete \parencite{Sas2019}.
+\end{itemize}
+
+\subsection{Antecedentes}
+La investigación actual presenta diversas estrategias para gestionar la integridad
+técnica del software, evolucionando desde la medición manual hacia enfoques
+predictivos y automatizados.
+\begin{itemize}
+    \item \textbf{ArchUnit:} Es una biblioteca gratuita y extensible diseñada
+        para verificar la arquitectura de código Java mediante cualquier entorno
+        de pruebas unitarias estándar. Funciona analizando el bytecode e importando
+        las clases en una estructura de código Java, lo que permite comprobar
+        dependencias entre paquetes, capas, ciclos y más. Es la herramienta que permite
+        materializar el concepto de "arquitectura auto-testeable" al permitir escribir
+        reglas arquitectónicas como si fueran pruebas unitarias comunes \parencite{ArchUnit}.
+
+    \item \textbf{ArchSync:} Este es una herramienta de asistencia que busca
+        mantener en sincronía el código con los escenarios arquitectónicos (Use Case
+        Maps). ¿Qué hace?, Utiliza heurísticas para procesar trazas de ejecución
+        y correlacionarlas con el comportamiento arquitectónico esperado,
+        sugiriendo "scripts de actualización" para corregir inconsistencias. Aunque
+        ArchSync se apoya más en el comportamiento dinámico (trazas), coincide
+        en reducir el esfuerzo de sincronización manual entre arquitectos y
+        desarrolladores. \parencite{ArchSyncJAndres}
+
+    \item \textbf{Gestión en PyMES:} \parencite{Hamed2023} proponen un enfoque de
+        gestión de deuda técnica diseñado específicamente para pequeñas y medianas
+        empresas (SMEs). Destacan que las limitaciones de recursos, presupuestos
+        ajustados y la falta de documentación actualizada en estos entornos hacen
+        vital una gobernanza basada en herramientas de análisis estático (como
+        SonarQube) que operen sobre el artefacto vivo del software \parencite{Hamed2023}.
+
+    \item \textbf{Índices de Deuda Basados en Machine Learning:} \parencite{SasAvgeriou}
+        desarrollaron el \textbf{ATDI (Architectural Technical Debt Index)}, el cual
+        utiliza modelos de aprendizaje automático (gradient boosting) para clasificar
+        la severidad de los smells arquitectónicos. Este enfoque combina el
+        análisis estático de las líneas de código afectadas con la severidad
+        estimada, logrando un 71\% de acuerdo con la percepción de esfuerzo de
+        refactorización de desarrolladores expertos \parencite{SasAvgeriou}.
+
+    \item \textbf{Conformidad Automatizada en el Flujo de CI/CD:} \parencite{Klein2022}
+        subrayan que el uso de verificadores de conformidad automatizados integrados
+        en los flujos de Integración Continua (CI) permite exponer las desviaciones
+        en el momento del commit. Esto facilita la remediación inmediata antes
+        de que las violaciones se fijen en la implementación, evitando que la deriva
+        se convierta en un problema de mantenimiento costoso meses o años después
+        \parencite{Klein2022}.
+
+    \item \textbf{Modelo de Reflexión (Software Reflexion Models):} \textcite{Murphy2001}
+        introdujeron el mecanismo formal para cuantificar la divergencia entre el
+        grafo de dependencias del código fuente (\textit{source model}) y la
+        arquitectura prescrita (\textit{high-level model}), clasificando cada
+        relación en convergencias (permitidas), divergencias (violaciones =
+        deriva) o ausencias (esperadas pero faltantes). Esta tripartición
+        fundamenta directamente el motor de validación y la Tasa de Conformidad
+        (CR) de este trabajo \parencite{Murphy2001}.
+\end{itemize}
