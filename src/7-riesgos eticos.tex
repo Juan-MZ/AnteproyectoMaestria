@@ -1,55 +1,70 @@
-\section{Riesgos Éticos}
+\section{Gestión y Mitigación de Riesgos Éticos}
 
-El desarrollo de un mecanismo automatizado para la gobernanza técnica en PyMES conlleva
-implicaciones éticas centradas en la privacidad, la equidad algorítmica y el
-impacto sociotécnico en los equipos de desarrollo.
+El valor del proyecto no depende únicamente de identificar riesgos éticos, sino
+de establecer desde el diseño del prototipo un conjunto de controles que reduzcan
+la probabilidad de daño y limiten el uso indebido de sus resultados. En ese
+sentido, la estrategia ética del anteproyecto se fundamenta en cuatro principios:
+privacidad por diseño, transparencia del diagnóstico, supervisión humana y uso
+proporcional de las métricas.
 
 \begin{itemize}
-    \item \textbf{Protección de información sensible:} El análisis estático
-        requiere acceso directo al código fuente, el cual constituye el activo más
-        valioso de una PyME. Existe el riesgo de exposición de lógica de negocio
-        o secretos industriales si los grafos de dependencia no se manejan bajo
-        protocolos de confidencialidad estrictos \parencite{Hamed2023, LAIG2025}.
+    \item \textbf{Mitigación del riesgo sobre información sensible:} El análisis
+        estático requiere acceso al código fuente, por lo que la primera medida
+        de control consiste en operar el prototipo en entornos restringidos y bajo
+        acuerdos explícitos de confidencialidad. Los artefactos generados deberán
+        limitarse a relaciones estructurales y métricas agregadas, evitando
+        exponer fragmentos de código, credenciales o detalles de lógica de negocio.
+        Asimismo, se priorizará el procesamiento local de los repositorios y la
+        minimización de datos almacenados, de manera que el mecanismo observe la
+        arquitectura sin convertir el código fuente en un insumo reutilizable por
+        terceros \parencite{Hamed2023, LAIG2025}.
 
-    \item \textbf{Sesgo algorítmico y falta de transparencia:} Los modelos de
-        aprendizaje automático utilizados para calcular índices como el ATDI
-        pueden presentar sesgos si los datos de entrenamiento no son
-        representativos o si se basan en umbrales arbitrarios \parencite{SasAvgeriou}.
-        Un diagnóstico erróneo de la severidad de un \textit{smell} podría llevar
-        a decisiones de refactorización costosas e innecesarias \parencite{SasAvgeriou}.
+    \item \textbf{Mitigación del sesgo algorítmico y de la opacidad del
+        diagnóstico:} Para evitar decisiones de refactorización basadas en umbrales
+        arbitrarios o interpretaciones erróneas, las reglas de evaluación deberán
+        ser explícitas, versionadas y trazables a criterios arquitectónicos
+        previamente definidos. En lugar de presentar la herramienta como una caja
+        negra, cada resultado deberá explicar qué regla se activó, cuál fue la
+        evidencia estructural encontrada y qué severidad se asignó. Además, la
+        validación del prototipo se realizará con revisión humana sobre casos de
+        prueba controlados, de forma que la salida automatizada se utilice como
+        apoyo a la decisión y no como veredicto incuestionable
+        \parencite{SasAvgeriou, Klein2022}.
 
-    \item \textbf{Impacto social y moral del equipo:} La deuda técnica tiene un
-        impacto documentado y negativo en la moral de los desarrolladores
-        \parencite{Hamed2023}. La automatización de la gobernanza corre el
-        riesgo de ser percibida como una herramienta de vigilancia punitiva en
-        lugar de un soporte técnico, lo que podría aumentar el estrés laboral si
-        los resultados se utilizan para evaluaciones de desempeño individual sin
-        considerar el contexto del negocio \parencite{Hamed2023, PaulWang2019}.
+    \item \textbf{Mitigación del impacto sociotécnico en los equipos:} Para
+        reducir la posibilidad de que la gobernanza automatizada sea percibida como
+        vigilancia punitiva, el uso de los reportes deberá orientarse al nivel de
+        componente o sistema y no a la evaluación individual de desarrolladores.
+        El mecanismo se incorporará como soporte para conversaciones técnicas,
+        retrospectivas arquitectónicas y priorización de refactorización, no como
+        instrumento disciplinario. Esta delimitación de uso debe quedar explícita
+        en la metodología del proyecto y en la interpretación de resultados,
+        protegiendo la moral del equipo y favoreciendo la adopción de la herramienta
+        como ayuda de mejora continua \parencite{Hamed2023, PaulWang2019}.
 
-    \item \textbf{Riesgo de formalismo vacío:} Existe la posibilidad de que los
-        equipos traten las \textit{Fitness Functions} como un simple trámite burocrático
-        (marcar casillas), ignorando la evaluación cŕıtica del diseño por
-        cumplir con una métrica de conformidad (CR) automatizada \parencite{LAIG2025}.
+    \item \textbf{Mitigación del formalismo vacío:} Existe el riesgo de que las
+        \textit{Fitness Functions} se conviertan en una rutina burocrática sin
+        reflexión arquitectónica real. Para evitarlo, los hallazgos del prototipo
+        deberán complementarse con revisión contextual por parte del equipo, registro
+        de excepciones justificadas y ajustes periódicos de las reglas conforme
+        evolucione el sistema. La métrica de conformidad no debe reemplazar el
+        juicio técnico, sino activar discusiones de diseño informadas y verificables
+        \parencite{LAIG2025}.
 
-    \item \textbf{Veracidad del diagnóstico y alcance parametrizable de la
-        herramienta:} La Tasa de Conformidad (CR) producida por el mecanismo es
-        un indicador \textit{circunscrito exclusivamente a las reglas
-        configuradas} en el prototipo, las cuales se limitan a las tres
-        dimensiones explicitadas en el alcance del proyecto: integridad de capas,
-        ausencia de ciclos de dependencia y cumplimiento de convenciones de
-        nomenclatura. El riesgo ético consiste en que directivos, auditores o
-        equipos de desarrollo interpreten una CR elevada como sinónimo de
-        arquitectura completa y correctamente gobernada, cuando en realidad solo
-        certifica el cumplimiento de las reglas programadas sobre el ecosistema evaluado.
-        Esta confusión puede generar una falsa sensación de control, inhibir revisiones
-        manuales complementarias y llevar a decisiones de inversión o despliegue
-        basadas en información parcial. Para mitigar este riesgo, el prototipo deberá
-        parametrizar su alcance de forma transparente: cada reporte debe
-        declarar explícitamente qué reglas se evaluaron, sobre qué módulos y con
-        qué umbrales, acompañado de una advertencia en los resultados que
-        indique que el diagnóstico \textbf{no cubre} aspectos arquitectónicos fuera
-        del alcance declarado. Asimismo, la herramienta no debe presentarse como
-        un árbitro definitivo de la calidad arquitectónica, sino como un
-        mecanismo de detección temprana acotado a su dominio de configuración
-        \parencite{Klein2022, LAIG2025}.
+    \item \textbf{Mitigación del riesgo de sobreinterpretación de la Tasa de
+        Conformidad (CR):} La CR producida por el mecanismo solo representa el
+        cumplimiento de las reglas configuradas dentro del alcance del prototipo:
+        integridad de capas, ausencia de ciclos de dependencia y convenciones de
+        nomenclatura. Para prevenir una falsa sensación de control, cada reporte
+        deberá declarar de manera visible qué reglas fueron evaluadas, qué módulos
+        fueron analizados, qué umbrales se aplicaron y qué aspectos quedaron fuera
+        del diagnóstico. En consecuencia, el prototipo se presentará como una
+        herramienta de detección temprana y no como un árbitro definitivo de la
+        calidad arquitectónica global \parencite{Klein2022, LAIG2025}.
 \end{itemize}
+
+En conjunto, estas medidas buscan que la automatización propuesta mantenga valor
+técnico sin desbordar su propósito investigativo ni generar incentivos de uso
+contrarios a la ética profesional. La mitigación, por tanto, no se plantea como
+un anexo del proyecto, sino como una condición de validez para su aplicación en
+contextos reales de PyMES de software.

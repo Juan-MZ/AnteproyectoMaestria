@@ -1,32 +1,32 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Planteamiento y Justificación del Problema}{7}{section.1}%
+\contentsline {section}{\numberline {1}Planteamiento y Justificación del Problema}{6}{section.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Planteamiento del Problema:}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.1}Planteamiento del Problema:}{6}{subsection.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Justificación del Proyecto:}{8}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.2}Justificación del Proyecto:}{7}{subsection.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Objetivos del proyecto}{8}{section.2}%
+\contentsline {section}{\numberline {2}Objetivos del proyecto}{7}{section.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Objetivo General}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Objetivo General}{7}{subsection.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Objetivos específicos}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Objetivos específicos}{7}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Alcance del Proyecto}{9}{section.3}%
+\contentsline {section}{\numberline {3}Alcance del Proyecto}{8}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Marco teórico y antecedentes}{10}{section.4}%
+\contentsline {section}{\numberline {4}Marco teórico y antecedentes}{9}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Bases Teóricas}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Bases Teóricas}{9}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Antecedentes}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Antecedentes}{11}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Riesgos Éticos}{14}{section.5}%
+\contentsline {section}{\numberline {5}Gestión y Mitigación de Riesgos Éticos}{13}{section.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Metodología del proyecto}{15}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Fases del Trabajo}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}Fases del Trabajo}{15}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Justificación de las Decisiones Metodológicas}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Justificación de las Decisiones Metodológicas}{16}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Cronograma}{17}{section.7}%
+\contentsline {section}{\numberline {7}Cronograma}{16}{section.7}%

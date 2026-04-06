@@ -16,6 +16,7 @@
 \graphicspath{{img/}} %ruta de la carpeta en donde estaràn las imágenes
 \usepackage{blindtext}
 \usepackage{hyperref}
+\usepackage{csquotes}
 \usepackage[style=apa, backend=biber, language=spanish,
             uniquename=false, uniquelist=false,
             mincrossrefs=200]{biblatex}
@@ -30,6 +31,7 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{dblfloatfix}
+\setlength{\marginparwidth}{2cm}
 \usepackage{todonotes}
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
@@ -55,6 +57,11 @@
     % Portada del Anteproyecto
     %%%%%%%%%%%%%%%%%
     \input{src/00-titulo}
+    \newpage
+    %%%%%%%%%%%%%%%%%
+    % Abstract
+    %%%%%%%%%%%%%%%%%
+    \input{src/0-abstract}
     \newpage
     %%%%%%%%%%%%%%%%%
     % Ficha resumen

@@ -1,18 +1,18 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'out/main.blg'
-[37] biber:330> INFO - === Fri Mar 27, 2026, 21:30:47
-[53] Biber.pm:415> INFO - Reading 'out/main.bcf'
-[103] Biber.pm:952> INFO - Found 20 citekeys in bib section 0
-[111] Biber.pm:4334> INFO - Processing section 0
-[117] Biber.pm:4523> INFO - Looking for bibtex format file 'bibfile.bib' for section 0
-[123] bibtex.pm:1682> INFO - LaTeX decoding ...
-[138] bibtex.pm:1494> INFO - Found BibTeX data source 'bibfile.bib'
-[183] Utils.pm:395> WARN - month field 'January' in entry 'PaulWang2019' is not an integer - this will probably not sort properly.
-[185] Utils.pm:395> WARN - I didn't find a database entry for 'DaSilvaCosta2022' (section 0)
-[185] Utils.pm:395> WARN - I didn't find a database entry for 'Glorot2011' (section 0)
-[199] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[199] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[199] Biber.pm:4162> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[210] bbl.pm:651> INFO - Writing 'out/main.bbl' with encoding 'UTF-8'
-[219] bbl.pm:754> INFO - Output to out/main.bbl
-[220] Biber.pm:128> INFO - WARNINGS: 3
+[37] biber:330> INFO - === Mon Apr  6, 2026, 16:42:21
+[52] Biber.pm:415> INFO - Reading 'out/main.bcf'
+[101] Biber.pm:952> INFO - Found 20 citekeys in bib section 0
+[110] Biber.pm:4334> INFO - Processing section 0
+[115] Biber.pm:4523> INFO - Looking for bibtex format file 'bibfile.bib' for section 0
+[120] bibtex.pm:1682> INFO - LaTeX decoding ...
+[132] bibtex.pm:1494> INFO - Found BibTeX data source 'bibfile.bib'
+[175] Utils.pm:395> WARN - month field 'January' in entry 'PaulWang2019' is not an integer - this will probably not sort properly.
+[177] Utils.pm:395> WARN - I didn't find a database entry for 'DaSilvaCosta2022' (section 0)
+[177] Utils.pm:395> WARN - I didn't find a database entry for 'Glorot2011' (section 0)
+[191] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[191] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[192] Biber.pm:4162> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[201] bbl.pm:651> INFO - Writing 'out/main.bbl' with encoding 'UTF-8'
+[210] bbl.pm:754> INFO - Output to out/main.bbl
+[211] Biber.pm:128> INFO - WARNINGS: 3
