@@ -2862,21 +2862,21 @@
     <bcf:citekey order="38">Klein2022</bcf:citekey>
     <bcf:citekey order="38">LAIG2025</bcf:citekey>
     <bcf:citekey order="39">Hamed2023</bcf:citekey>
-    <bcf:citekey order="40">PaulWang2019</bcf:citekey>
+    <bcf:citekey order="39">Klein2022</bcf:citekey>
+    <bcf:citekey order="40">Anthony2024</bcf:citekey>
+    <bcf:citekey order="40">NiessenMedium</bcf:citekey>
     <bcf:citekey order="41">Pigazzini2021</bcf:citekey>
-    <bcf:citekey order="42">Klein2022</bcf:citekey>
-    <bcf:citekey order="43">Pigazzini2021</bcf:citekey>
+    <bcf:citekey order="41">SasAvgeriou</bcf:citekey>
+    <bcf:citekey order="42">PaulWang2019</bcf:citekey>
+    <bcf:citekey order="42">FitnessF</bcf:citekey>
     <bcf:citekey order="43">Klein2022</bcf:citekey>
+    <bcf:citekey order="43">Murphy2001</bcf:citekey>
     <bcf:citekey order="44">PaulWang2019</bcf:citekey>
-    <bcf:citekey order="45">SasAvgeriou</bcf:citekey>
-    <bcf:citekey order="46">Hamed2023</bcf:citekey>
-    <bcf:citekey order="46">Anthony2024</bcf:citekey>
-    <bcf:citekey order="47">Anthony2024</bcf:citekey>
-    <bcf:citekey order="47">Klein2022</bcf:citekey>
-    <bcf:citekey order="48">PaulWang2019</bcf:citekey>
-    <bcf:citekey order="48">NiessenMedium</bcf:citekey>
-    <bcf:citekey order="49">DaSilvaCosta2022</bcf:citekey>
-    <bcf:citekey order="50">Glorot2011</bcf:citekey>
+    <bcf:citekey order="44">ArchUnit</bcf:citekey>
+    <bcf:citekey order="45">Anthony2024</bcf:citekey>
+    <bcf:citekey order="45">Sas2019</bcf:citekey>
+    <bcf:citekey order="46">DaSilvaCosta2022</bcf:citekey>
+    <bcf:citekey order="47">Glorot2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

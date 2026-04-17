@@ -25,8 +25,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Metodología del proyecto}{15}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Fases del Trabajo}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}Diseño metodológico}{15}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Justificación de las Decisiones Metodológicas}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Fases de ejecución}{16}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Cronograma}{16}{section.7}%
+\contentsline {subsection}{\numberline {6.3}Técnicas e instrumentos de recolección y análisis}{17}{subsection.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4}Criterios de cierre}{17}{subsection.6.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Cronograma}{18}{section.7}%

@@ -1,23 +1,43 @@
 \section{Metodología del proyecto}
 
-La estrategia general de este proyecto se fundamenta en la metodología \textbf{Design Science Research (DSR)}, la cual permite la creación y evaluación de artefactos tecnológicos diseñados para resolver problemas prácticos identificados en la ingeniería de software \parencite{Hamed2023}. En este contexto, el problema abordado es la falta de gobernanza técnica continua en PyMES, y el artefacto propuesto es un mecanismo automatizado de detección de deriva arquitectónica.
+Este proyecto se desarrollará como una investigación aplicada, con enfoque predominantemente cuantitativo y con estrategia de \textbf{Design Science Research (DSR)}, dado que el resultado principal es la construcción y evaluación de un artefacto software orientado a resolver un problema práctico de gobernanza arquitectónica \parencite{Hamed2023, Klein2022}. Para que el trabajo sea alcanzable dentro de los cinco meses y las 192 horas definidas para el anteproyecto, la estrategia DSR se ejecutará mediante ciclos iterativos cortos, cada uno con un entregable verificable y un cierre de revisión con el director.
 
-El enfoque del trabajo es eminentemente técnico y se divide en cuatro fases iterativas, alineadas directamente con los objetivos específicos planteados.
+\subsection{Diseño metodológico}
 
-\subsection{Fases del Trabajo}
+El diseño metodológico se apoyará en las siguientes decisiones operativas:
+
+\begin{itemize}
+    \item \textbf{Unidad de trabajo:} un único sistema de software con código fuente disponible, arquitectura en capas y tamaño acotado, implementado en un solo ecosistema tecnológico seleccionado al inicio del proyecto (Java o .NET).
+    \item \textbf{Artefacto a construir:} un prototipo que extraiga dependencias desde el código fuente, construya un grafo estructural, ejecute reglas de validación arquitectónica y produzca un reporte con hallazgos y una \textbf{Tasa de Conformidad (CR)}.
+    \item \textbf{Alcance técnico del prototipo:} el mecanismo se limitará a tres dimensiones de conformidad: integridad de capas, ausencia de ciclos de dependencia y cumplimiento de convenciones de nomenclatura arquitectónica. Esta delimitación mantiene el esfuerzo dentro del tiempo disponible y es coherente con los objetivos específicos del anteproyecto \parencite{Anthony2024, NiessenMedium}.
+    \item \textbf{Estrategia de validación:} el artefacto se evaluará mediante un estudio de caso controlado, ejecutándolo primero sobre una línea base y después sobre versiones con derivas introducidas deliberadamente para verificar su capacidad de detección \parencite{Pigazzini2021, SasAvgeriou}.
+\end{itemize}
+
+\subsection{Fases de ejecución}
 
 \begin{enumerate}
-    \item \textbf{Fase de Definición y Especificación (Objetivo 1):} Se procederá a la formalización de las reglas de diseño bajo el paradigma de la arquitectura evolutiva. Utilizando el concepto de \textit{Fitness Functions} \parencite{PaulWang2019}, se traducirán principios abstractos (como la integridad de capas y la modularidad) en indicadores métricos objetivos y ejecutables. Se priorizarán métricas de acoplamiento eferente y detección de ciclos por ser síntomas críticos de erosión \parencite{Pigazzini2021}.
+    \item \textbf{Delimitación del caso de estudio y catálogo de reglas:} se seleccionará el ecosistema tecnológico a trabajar, se escogerá el sistema base y se definirá un catálogo acotado de reglas ejecutables. Como resultado se construirá una matriz de validación con la descripción de cada regla, su propósito, la evidencia esperada y el criterio de incumplimiento. En esta fase se tomarán como referencia las \textit{Fitness Functions} como mecanismo para traducir decisiones arquitectónicas en verificaciones automáticas \parencite{PaulWang2019, FitnessF}.
 
-    \item \textbf{Fase de Implementación del Analizador Estático (Objetivo 2):} Se desarrollará un componente capaz de extraer hechos arquitectónicos directamente del código fuente Java sin requerir ejecución. Siguiendo modelos de inferencia de diseño \parencite{Klein2022}, el componente procesará archivos .java y configuraciones de construcción (Maven/Gradle). Los datos extraídos se representarán mediante \textbf{grafos de dependencia}, donde las clases y paquetes actuarán como nodos y sus relaciones como aristas, utilizando bases de datos orientadas a grafos para facilitar consultas estructurales complejas \parencite{Pigazzini2021, Klein2022}.
+    \item \textbf{Diseño técnico del prototipo:} se definirá la arquitectura interna del mecanismo, las entradas y salidas del proceso, la estructura del grafo de dependencia y el formato del reporte de resultados. El objetivo de esta fase es reducir riesgo de implementación antes de programar, dejando explícitas las clases de relaciones que se van a analizar y las restricciones que no formarán parte del alcance.
 
-    \item \textbf{Fase de Construcción del Motor de Validación (Objetivo 3):} Se programará el motor lógico que contrastará el grafo de la arquitectura implementada (extraído en la fase anterior) contra el modelo de la arquitectura prescrita definido por las \textit{Fitness Functions}. El resultado principal será el cálculo automático de la \textbf{Tasa de Conformidad (CR)}, que proporcionará una visión cuantitativa de la integridad del sistema \parencite{PaulWang2019}.
+    \item \textbf{Construcción del componente de extracción:} se implementará el módulo encargado de inspeccionar el código fuente y los archivos de configuración necesarios para inferir dependencias estructurales. El producto de esta fase será una representación navegable del sistema en forma de grafo, suficiente para consultar paquetes, componentes y relaciones relevantes para el análisis arquitectónico \parencite{Klein2022, Murphy2001}.
 
-    \item \textbf{Fase de Evaluación mediante Estudio de Caso (Objetivo 4):} El mecanismo se validará en un entorno controlado (real o simulado) con un esfuerzo de 192 horas de investigación. La técnica de recolección de datos consistirá en la \textbf{inyección voluntaria de derivas arquitectónicas} (violación de capas y ciclos de dependencia) para medir la sensibilidad y precisión del motor en su detección. Se utilizarán índices de referencia como el \textit{Architectural Technical Debt Index} (ATDI) para contrastar la efectividad del prototipo \parencite{SasAvgeriou}.
+    \item \textbf{Construcción del motor de validación:} sobre el grafo obtenido se implementarán las reglas definidas en la primera fase. Este motor calculará la \textbf{CR} como proporción de reglas cumplidas frente al total de reglas evaluadas y reportará las violaciones detectadas por tipo, ubicación y severidad. Con ello se dará cumplimiento al objetivo de automatizar la verificación de conformidad arquitectónica \parencite{PaulWang2019, ArchUnit}.
+
+    \item \textbf{Evaluación y análisis de resultados:} el prototipo se ejecutará sobre el caso de estudio seleccionado y sobre versiones con derivas controladas, tales como dependencias entre capas no permitidas, ciclos entre módulos y nomenclatura inconsistente. Los resultados se analizarán comparando las derivas esperadas con las efectivamente detectadas, la variación de la \textbf{CR} y la utilidad del reporte para apoyar decisiones de mantenimiento y refactorización \parencite{Anthony2024, Sas2019}.
 \end{enumerate}
 
-\subsection{Justificación de las Decisiones Metodológicas}
+\subsection{Técnicas e instrumentos de recolección y análisis}
 
-La elección de \textbf{Design Science Research} se justifica por su capacidad para cerrar la brecha entre la teoría académica y la práctica industrial en PyMES, donde la documentación suele ser inexistente o estar desactualizada \parencite{Hamed2023, Anthony2024}. 
+Para desarrollar y evaluar el prototipo se utilizarán las siguientes técnicas e instrumentos:
 
-El uso de \textbf{análisis estático} basado en el código como "única fuente de verdad" es una decisión crítica para garantizar que la gobernanza sea viable en entornos ágiles, evitando la dependencia de artefactos externos que introducen errores de interpretación \parencite{Anthony2024, Klein2022}. Finalmente, la adopción de \textbf{Fitness Functions} permite integrar la validación arquitectónica directamente en el flujo de desarrollo, transformando la gobernanza técnica de una revisión manual esporádica a un proceso de monitoreo continuo y objetivo \parencite{PaulWang2019, NiessenMedium}.
+\begin{itemize}
+    \item \textbf{Revisión bibliográfica focalizada,} para consolidar criterios de deriva arquitectónica y seleccionar reglas viables para un prototipo de alcance acotado.
+    \item \textbf{Matriz de reglas arquitectónicas,} en la que se registrará cada regla, su racionalidad, patrón esperado y evidencia de incumplimiento.
+    \item \textbf{Bitácora de desarrollo y ejecución,} donde se documentarán decisiones, ajustes del prototipo, resultados de las corridas y observaciones del director.
+    \item \textbf{Tablas comparativas de resultados,} orientadas a registrar número de violaciones detectadas, porcentaje de conformidad, tipo de deriva identificada y diferencias entre la línea base y las versiones alteradas.
+\end{itemize}
+
+\subsection{Criterios de cierre}
+
+Se considerará que la metodología ha producido resultados suficientes para el anteproyecto cuando se cumplan los siguientes criterios: a) existencia de un catálogo acotado de reglas ejecutables, b) disponibilidad de un prototipo funcional sobre un único ecosistema, c) generación de reportes de conformidad a partir del código fuente y d) evidencia de que el mecanismo identifica derivas introducidas en un entorno controlado. Estos criterios permiten mantener una meta realista y medible, adecuada al tiempo de dedicación previsto para el trabajo.
