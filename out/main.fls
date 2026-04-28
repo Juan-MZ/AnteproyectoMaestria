@@ -350,9 +350,6 @@ INPUT out/main.lot
 INPUT out/main.lot
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
 OUTPUT out/main.lot
-INPUT out/main.tdo
-INPUT out/main.tdo
-OUTPUT out/main.tdo
 INPUT src/1-problema.tex
 INPUT src/1-problema.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
@@ -375,8 +372,6 @@ INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT src/9-referencias.tex
-INPUT src/9-referencias.tex
 INPUT out/main.aux
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
 INPUT out/main.out
