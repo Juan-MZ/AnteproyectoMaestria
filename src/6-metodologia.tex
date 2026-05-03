@@ -8,23 +8,26 @@ El diseño metodológico se apoyará en las siguientes decisiones operativas:
 
 \begin{itemize}
     \item \textbf{Unidad de trabajo:} un único sistema de software con código fuente disponible, arquitectura en capas y tamaño acotado, implementado en un solo ecosistema tecnológico seleccionado al inicio del proyecto (Java o .NET).
-    \item \textbf{Artefacto a construir:} un prototipo que extraiga dependencias desde el código fuente, construya un grafo estructural, ejecute reglas de validación arquitectónica y produzca un reporte con hallazgos y una \textbf{Tasa de Conformidad (CR)}.
-    \item \textbf{Alcance técnico del prototipo:} el mecanismo se limitará a tres dimensiones de conformidad: integridad de capas, ausencia de ciclos de dependencia y cumplimiento de convenciones de nomenclatura arquitectónica. Esta delimitación mantiene el esfuerzo dentro del tiempo disponible y es coherente con los objetivos específicos del anteproyecto \parencite{Anthony2024, NiessenMedium}.
-    \item \textbf{Estrategia de validación:} el artefacto se evaluará mediante un estudio de caso controlado, ejecutándolo primero sobre una línea base y después sobre versiones con derivas introducidas deliberadamente para verificar su capacidad de detección \parencite{Pigazzini2021, SasAvgeriou}.
+    \item \textbf{Artefacto a construir:} un prototipo que extraiga dependencias desde el código fuente, construya un grafo estructural, ejecute reglas de validación arquitectónica y produzca un reporte con hallazgos, evidencia trazable y una \textbf{Tasa de Conformidad (CR)}.
+    \item \textbf{Alcance técnico del prototipo:} el mecanismo se limitará a tres dimensiones de conformidad: integridad de capas, ausencia de ciclos de dependencia y control de concentración excesiva de dependencias salientes en componentes o paquetes. Esta delimitación mantiene el esfuerzo dentro del tiempo disponible y es coherente con los objetivos específicos del anteproyecto \parencite{Anthony2024, Sas2019}.
+    \item \textbf{Umbral operativo de interpretación:} la \textbf{CR} se interpretará con tres rangos iniciales para la evaluación experimental: estado aceptable si $CR \geq 85\%$, estado en observación si $70\% \leq CR < 85\%$ y estado no conforme si $CR < 70\%$. Estos umbrales no pretenden convertirse en estándar universal, sino servir como criterio explícito para decidir qué se considera bien o mal dentro del experimento controlado.
+    \item \textbf{Estrategia de validación:} el artefacto se evaluará mediante un estudio de caso controlado, ejecutándolo primero sobre una línea base y después sobre versiones con derivas introducidas deliberadamente para verificar su capacidad de detección, la variación de la CR y la utilidad de la clasificación obtenida \parencite{Pigazzini2021, SasAvgeriou}.
 \end{itemize}
 
 \subsection{Fases de ejecución}
 
-\begin{enumerate}
-    \item \textbf{Delimitación del caso de estudio y catálogo de reglas:} se seleccionará el ecosistema tecnológico a trabajar, se escogerá el sistema base y se definirá un catálogo acotado de reglas ejecutables. Como resultado se construirá una matriz de validación con la descripción de cada regla, su propósito, la evidencia esperada y el criterio de incumplimiento. En esta fase se tomarán como referencia las \textit{Fitness Functions} como mecanismo para traducir decisiones arquitectónicas en verificaciones automáticas \parencite{PaulWang2019, FitnessF}.
+Las fases de ejecución guardan correspondencia directa con los objetivos específicos del proyecto: la primera fase responde al objetivo de definir el catálogo de reglas, la segunda y la tercera al objetivo de construir la base técnica del análisis estático y del grafo estructural, la cuarta al objetivo de implementar el motor de validación con umbrales de interpretación, y la quinta al objetivo de ejecutar el experimento controlado y analizar sus resultados.
 
-    \item \textbf{Diseño técnico del prototipo:} se definirá la arquitectura interna del mecanismo, las entradas y salidas del proceso, la estructura del grafo de dependencia y el formato del reporte de resultados. El objetivo de esta fase es reducir riesgo de implementación antes de programar, dejando explícitas las clases de relaciones que se van a analizar y las restricciones que no formarán parte del alcance.
+\begin{enumerate}
+    \item \textbf{Delimitación del caso de estudio y catálogo de reglas:} se seleccionará el ecosistema tecnológico a trabajar, se escogerá el sistema base y se definirá un catálogo acotado de reglas ejecutables. Como resultado se construirá una matriz de validación con la descripción de cada regla, su propósito, la evidencia esperada, el criterio de incumplimiento y, cuando aplique, el umbral particular asociado. En esta fase se tomarán como referencia las \textit{Fitness Functions} como mecanismo para traducir decisiones arquitectónicas en verificaciones automáticas \parencite{PaulWang2019, FitnessF}.
+
+    \item \textbf{Diseño técnico del prototipo:} se definirá la arquitectura interna del mecanismo, las entradas y salidas del proceso, la estructura del grafo de dependencia y el formato del reporte de resultados. El objetivo de esta fase es reducir riesgo de implementación antes de programar, dejando explícitas las relaciones que se van a analizar, la manera de calcular la CR y la interpretación de los resultados frente a los umbrales definidos.
 
     \item \textbf{Construcción del componente de extracción:} se implementará el módulo encargado de inspeccionar el código fuente y los archivos de configuración necesarios para inferir dependencias estructurales. El producto de esta fase será una representación navegable del sistema en forma de grafo, suficiente para consultar paquetes, componentes y relaciones relevantes para el análisis arquitectónico \parencite{Klein2022, Murphy2001}.
 
-    \item \textbf{Construcción del motor de validación:} sobre el grafo obtenido se implementarán las reglas definidas en la primera fase. Este motor calculará la \textbf{CR} como proporción de reglas cumplidas frente al total de reglas evaluadas y reportará las violaciones detectadas por tipo, ubicación y severidad. Con ello se dará cumplimiento al objetivo de automatizar la verificación de conformidad arquitectónica \parencite{PaulWang2019, ArchUnit}.
+    \item \textbf{Construcción del motor de validación:} sobre el grafo obtenido se implementarán las reglas definidas en la primera fase. Este motor calculará la \textbf{CR} como proporción de reglas cumplidas frente al total de reglas evaluadas, clasificará el estado del sistema según los umbrales operativos y reportará las violaciones detectadas por tipo, ubicación y severidad. Con ello se dará cumplimiento al objetivo de automatizar la verificación de conformidad arquitectónica \parencite{PaulWang2019, ArchUnit}.
 
-    \item \textbf{Evaluación y análisis de resultados:} el prototipo se ejecutará sobre el caso de estudio seleccionado y sobre versiones con derivas controladas, tales como dependencias entre capas no permitidas, ciclos entre módulos y nomenclatura inconsistente. Los resultados se analizarán comparando las derivas esperadas con las efectivamente detectadas, la variación de la \textbf{CR} y la utilidad del reporte para apoyar decisiones de mantenimiento y refactorización \parencite{Anthony2024, Sas2019}.
+    \item \textbf{Evaluación y análisis de resultados:} el prototipo se ejecutará sobre el caso de estudio seleccionado y sobre versiones con derivas controladas, tales como dependencias entre capas no permitidas, ciclos entre módulos y componentes con concentración excesiva de dependencias salientes. Los resultados se analizarán comparando las derivas esperadas con las efectivamente detectadas, la variación de la \textbf{CR}, la clasificación del estado arquitectónico y la utilidad del reporte para apoyar decisiones de mantenimiento y refactorización \parencite{Anthony2024, Sas2019}.
 \end{enumerate}
 
 \subsection{Técnicas e instrumentos de recolección y análisis}
@@ -32,12 +35,66 @@ El diseño metodológico se apoyará en las siguientes decisiones operativas:
 Para desarrollar y evaluar el prototipo se utilizarán las siguientes técnicas e instrumentos:
 
 \begin{itemize}
-    \item \textbf{Revisión bibliográfica focalizada,} para consolidar criterios de deriva arquitectónica y seleccionar reglas viables para un prototipo de alcance acotado.
-    \item \textbf{Matriz de reglas arquitectónicas,} en la que se registrará cada regla, su racionalidad, patrón esperado y evidencia de incumplimiento.
-    \item \textbf{Bitácora de desarrollo y ejecución,} donde se documentarán decisiones, ajustes del prototipo, resultados de las corridas y observaciones del director.
-    \item \textbf{Tablas comparativas de resultados,} orientadas a registrar número de violaciones detectadas, porcentaje de conformidad, tipo de deriva identificada y diferencias entre la línea base y las versiones alteradas.
+    \item \textbf{Revisión bibliográfica focalizada:} para consolidar criterios de deriva arquitectónica y seleccionar reglas viables para un prototipo de alcance acotado.
+    \item \textbf{Matriz de reglas arquitectónicas:} en la que se registrará cada regla, su racionalidad, patrón esperado y evidencia de incumplimiento.
+    \item \textbf{Bitácora de desarrollo y ejecución:} donde se documentarán decisiones, ajustes del prototipo, resultados de las corridas y observaciones del director.
+    \item \textbf{Tablas comparativas de resultados:} orientadas a registrar número de violaciones detectadas, porcentaje de conformidad, tipo de deriva identificada, clasificación del estado arquitectónico y diferencias entre la línea base y las versiones alteradas.
+\end{itemize}
+
+\subsection{Mecanismo de evaluación y demostración}
+
+La evaluación del proyecto se concretará mediante un experimento controlado de caso único, suficiente para demostrar la utilidad del artefacto dentro del alcance del anteproyecto. La demostración seguirá esta lógica:
+
+\begin{enumerate}
+    \item Seleccionar una versión base del sistema que represente el comportamiento arquitectónico esperado para el caso de estudio.
+    \item Construir versiones derivadas en las que se introduzcan deliberadamente violaciones de capas, ciclos de dependencia y concentración excesiva de dependencias salientes.
+    \item Ejecutar el prototipo sobre la versión base y sobre cada versión alterada, manteniendo constante el mismo catálogo de reglas.
+    \item Comparar los resultados observados con la matriz de validación esperada para verificar si el mecanismo detecta cada deriva, si disminuye la \textbf{CR} cuando corresponde y si la clasificación del estado arquitectónico coincide con el escenario construido.
+\end{enumerate}
+
+Los indicadores principales de evaluación serán los siguientes:
+
+\begin{itemize}
+    \item \textbf{Cobertura de detección:} proporción de derivas inducidas que el prototipo logra identificar.
+    \item \textbf{Falsos positivos en la línea base:} verificación de que el mecanismo no marque como anómalo un estado estructural esperado.
+    \item \textbf{Variación de la CR:} comprobación de que la métrica sea sensible a la degradación introducida en las versiones alteradas.
+    \item \textbf{Capacidad explicativa del reporte:} presencia de la regla violada, su ubicación y evidencia estructural suficiente para interpretación humana.
+\end{itemize}
+
+Con ello, el proyecto no solo mostrará que el prototipo funciona, sino también bajo qué criterios se evaluará su desempeño.
+
+\subsection{Resultados esperados}
+
+Como resultado del desarrollo del anteproyecto se espera obtener los siguientes productos verificables:
+
+\begin{itemize}
+    \item Un prototipo funcional capaz de extraer dependencias estructurales desde el código fuente, construir un grafo y ejecutar reglas de conformidad arquitectónica.
+    \item Un catálogo documentado de \textit{Fitness Functions} para las tres familias de deriva seleccionadas, con su racionalidad, evidencia esperada y criterio de incumplimiento.
+    \item Una matriz de validación y un conjunto de reportes que permitan observar la \textbf{CR}, las reglas incumplidas y la clasificación del estado arquitectónico de los escenarios evaluados.
+    \item Evidencia experimental obtenida al comparar una línea base con versiones alteradas del caso de estudio, suficiente para juzgar la utilidad del mecanismo propuesto.
+    \item Un documento final de investigación que sistematice el problema, la solución construida, el proceso metodológico y los hallazgos derivados de la evaluación.
 \end{itemize}
 
 \subsection{Criterios de cierre}
 
-Se considerará que la metodología ha producido resultados suficientes para el anteproyecto cuando se cumplan los siguientes criterios: a) existencia de un catálogo acotado de reglas ejecutables, b) disponibilidad de un prototipo funcional sobre un único ecosistema, c) generación de reportes de conformidad a partir del código fuente y d) evidencia de que el mecanismo identifica derivas introducidas en un entorno controlado. Estos criterios permiten mantener una meta realista y medible, adecuada al tiempo de dedicación previsto para el trabajo.
+Se considerará que la metodología ha producido resultados suficientes para el anteproyecto cuando se cumplan los siguientes criterios:
+
+\begin{itemize}
+    \item Existencia de un catálogo acotado de reglas ejecutables.
+    \item Disponibilidad de un prototipo funcional sobre un único ecosistema.
+    \item Generación de reportes de conformidad a partir del código fuente.
+    \item Evidencia de que el mecanismo identifica derivas introducidas en un entorno controlado.
+\end{itemize}
+
+Estos criterios permiten mantener una meta realista y medible, adecuada al tiempo de dedicación previsto para el trabajo.
+
+\subsection{Criterios de éxito}
+
+Los criterios de éxito se derivan directamente de los objetivos específicos del proyecto:
+
+\begin{itemize}
+    \item \textbf{Éxito del objetivo 1:} existe un catálogo documentado con al menos una regla ejecutable por cada familia de deriva definida, y cada regla incluye propósito, evidencia esperada y criterio de incumplimiento.
+    \item \textbf{Éxito del objetivo 2:} el componente de análisis estático construye un grafo navegable del sistema seleccionado y representa de forma consistente los componentes y dependencias necesarios para evaluar las reglas.
+    \item \textbf{Éxito del objetivo 3:} el motor calcula automáticamente la \textbf{CR}, aplica los umbrales definidos y clasifica los escenarios evaluados de forma coherente con la matriz de validación del experimento.
+    \item \textbf{Éxito del objetivo 4:} el experimento controlado permite detectar al menos el 80\% de las derivas introducidas deliberadamente, mantener la línea base sin hallazgos críticos inesperados y generar reportes comprensibles para apoyar decisiones de mantenimiento.
+\end{itemize}

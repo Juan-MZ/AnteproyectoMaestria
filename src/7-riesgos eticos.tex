@@ -5,62 +5,21 @@ de establecer desde el diseño del prototipo un conjunto de controles que reduzc
 la probabilidad de daño y limiten el uso indebido de sus resultados. En ese
 sentido, la estrategia ética del anteproyecto se fundamenta en cuatro principios:
 privacidad por diseño, transparencia del diagnóstico, supervisión humana y uso
-proporcional de las métricas.
+proporcional de las métricas. Desde la gestión del riesgo, cada situación puede
+tratarse mediante una de cuatro respuestas: aceptarlo, evitarlo, transferirlo o
+mitigarlo. A continuación se asigna el tratamiento más adecuado para cada riesgo
+identificado.
 
 \begin{itemize}
-    \item \textbf{Mitigación del riesgo sobre información sensible:} El análisis
-        estático requiere acceso al código fuente, por lo que la primera medida
-        de control consiste en operar el prototipo en entornos restringidos y bajo
-        acuerdos explícitos de confidencialidad. Los artefactos generados deberán
-        limitarse a relaciones estructurales y métricas agregadas, evitando
-        exponer fragmentos de código, credenciales o detalles de lógica de negocio.
-        Asimismo, se priorizará el procesamiento local de los repositorios y la
-        minimización de datos almacenados, de manera que el mecanismo observe la
-        arquitectura sin convertir el código fuente en un insumo reutilizable por
-        terceros \parencite{Hamed2023, LAIG2025}.
+    \item \textbf{Riesgo sobre información sensible. Tratamiento: evitarlo.} El análisis estático requiere acceso al código fuente, por lo que la respuesta más adecuada consiste en impedir desde el inicio escenarios innecesarios de exposición. El prototipo se operará en entornos restringidos, con repositorios autorizados y bajo acuerdos explícitos de confidencialidad. Los artefactos generados se limitarán a relaciones estructurales y métricas agregadas, evitando exponer fragmentos de código, credenciales o lógica de negocio. Además, se priorizará el procesamiento local y la minimización de datos almacenados \parencite{Hamed2023, LAIG2025}.
 
-    \item \textbf{Mitigación del sesgo algorítmico y de la opacidad del
-        diagnóstico:} Para evitar decisiones de refactorización basadas en umbrales
-        arbitrarios o interpretaciones erróneas, las reglas de evaluación deberán
-        ser explícitas, versionadas y trazables a criterios arquitectónicos
-        previamente definidos. En lugar de presentar la herramienta como una caja
-        negra, cada resultado deberá explicar qué regla se activó, cuál fue la
-        evidencia estructural encontrada y qué severidad se asignó. Además, la
-        validación del prototipo se realizará con revisión humana sobre casos de
-        prueba controlados, de forma que la salida automatizada se utilice como
-        apoyo a la decisión y no como veredicto incuestionable
-        \parencite{SasAvgeriou, Klein2022}.
+    \item \textbf{Riesgo de sesgo algorítmico y opacidad del diagnóstico. Tratamiento: mitigarlo.} Para evitar decisiones de refactorización basadas en umbrales arbitrarios o interpretaciones erróneas, las reglas de evaluación deberán ser explícitas, versionadas y trazables a criterios arquitectónicos previamente definidos. Cada resultado deberá explicar qué regla se activó, cuál fue la evidencia estructural encontrada y qué severidad se asignó. Además, la validación del prototipo se realizará con revisión humana sobre casos de prueba controlados, de forma que la salida automatizada se utilice como apoyo a la decisión y no como veredicto incuestionable \parencite{SasAvgeriou, Klein2022}.
 
-    \item \textbf{Mitigación del impacto sociotécnico en los equipos:} Para
-        reducir la posibilidad de que la gobernanza automatizada sea percibida como
-        vigilancia punitiva, el uso de los reportes deberá orientarse al nivel de
-        componente o sistema y no a la evaluación individual de desarrolladores.
-        El mecanismo se incorporará como soporte para conversaciones técnicas,
-        retrospectivas arquitectónicas y priorización de refactorización, no como
-        instrumento disciplinario. Esta delimitación de uso debe quedar explícita
-        en la metodología del proyecto y en la interpretación de resultados,
-        protegiendo la moral del equipo y favoreciendo la adopción de la herramienta
-        como ayuda de mejora continua \parencite{Hamed2023, PaulWang2019}.
+    \item \textbf{Riesgo de impacto sociotécnico en los equipos. Tratamiento: mitigarlo.} Para reducir la posibilidad de que la gobernanza automatizada sea percibida como vigilancia punitiva, el uso de los reportes deberá orientarse al nivel de componente o sistema y no a la evaluación individual de desarrolladores. El mecanismo se incorporará como soporte para conversaciones técnicas, retrospectivas arquitectónicas y priorización de refactorización, no como instrumento disciplinario \parencite{Hamed2023, PaulWang2019}.
 
-    \item \textbf{Mitigación del formalismo vacío:} Existe el riesgo de que las
-        \textit{Fitness Functions} se conviertan en una rutina burocrática sin
-        reflexión arquitectónica real. Para evitarlo, los hallazgos del prototipo
-        deberán complementarse con revisión contextual por parte del equipo, registro
-        de excepciones justificadas y ajustes periódicos de las reglas conforme
-        evolucione el sistema. La métrica de conformidad no debe reemplazar el
-        juicio técnico, sino activar discusiones de diseño informadas y verificables
-        \parencite{LAIG2025}.
+    \item \textbf{Riesgo de formalismo vacío. Tratamiento: aceptarlo de forma controlada.} Siempre existirá la posibilidad de que una métrica de conformidad sea usada de manera mecánica y sin reflexión contextual. Ese riesgo no puede eliminarse por completo, por lo que la respuesta más realista es aceptarlo de forma controlada y reducir su impacto mediante revisión contextual, registro de excepciones justificadas y ajustes periódicos de las reglas conforme evolucione el sistema. La \textbf{CR} no debe reemplazar el juicio técnico, sino activar discusiones de diseño informadas y verificables \parencite{LAIG2025}.
 
-    \item \textbf{Mitigación del riesgo de sobreinterpretación de la Tasa de
-        Conformidad (CR):} La CR producida por el mecanismo solo representa el
-        cumplimiento de las reglas configuradas dentro del alcance del prototipo:
-        integridad de capas, ausencia de ciclos de dependencia y convenciones de
-        nomenclatura. Para prevenir una falsa sensación de control, cada reporte
-        deberá declarar de manera visible qué reglas fueron evaluadas, qué módulos
-        fueron analizados, qué umbrales se aplicaron y qué aspectos quedaron fuera
-        del diagnóstico. En consecuencia, el prototipo se presentará como una
-        herramienta de detección temprana y no como un árbitro definitivo de la
-        calidad arquitectónica global \parencite{Klein2022, LAIG2025}.
+    \item \textbf{Riesgo de sobreinterpretación de la Tasa de Conformidad (CR). Tratamiento: transferirlo parcialmente a la decisión humana responsable.} La \textbf{CR} producida por el mecanismo solo representa el cumplimiento de las reglas configuradas dentro del alcance del prototipo: integridad de capas, ausencia de ciclos de dependencia y control de concentración excesiva de dependencias salientes. Para evitar que la métrica se entienda como veredicto absoluto, cada reporte deberá declarar qué reglas fueron evaluadas, qué módulos fueron analizados, qué umbrales se aplicaron y qué aspectos quedaron fuera del diagnóstico. La decisión final sobre priorización de refactorización o aceptación del riesgo recaerá en el director del proyecto o en el responsable técnico del caso de estudio, no en la herramienta \parencite{Klein2022, LAIG2025}.
 \end{itemize}
 
 En conjunto, estas medidas buscan que la automatización propuesta mantenga valor

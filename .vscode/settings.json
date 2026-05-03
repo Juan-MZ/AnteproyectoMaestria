@@ -1,0 +1,53 @@
+{
+    "latex-workshop.docker.enabled": false,
+    "latex-workshop.docker.image.latex": "xucheng/texlive-full",
+    "latex-workshop.latex.outDir": "%DIR%/out",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex -> bibtex -> pdflatex x2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "tools": ["pdflatex"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "docker",
+            "env": {},
+            "args": [
+                "run", "--rm",
+                "-v", "%DIR%:/workdir",
+                "-w", "/workdir",
+                "xucheng/texlive-full",
+                "pdflatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=out",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "docker",
+            "env": {},
+            "args": [
+                "run", "--rm",
+                "-v", "%DIR%:/workdir",
+                "-w", "/workdir",
+                "xucheng/texlive-full",
+                "bibtex",
+                "out/%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab"
+}

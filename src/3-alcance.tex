@@ -1,7 +1,22 @@
-\section{Alcance del Proyecto}
+\section{Alcance del proyecto}
+
+El alcance del proyecto comprende todo lo necesario para construir y demostrar un prototipo funcional de detección de deriva arquitectónica en un contexto acotado y viable para una maestría. En consecuencia, el trabajo incluirá las siguientes actividades y entregables:
 
 \begin{itemize}
-  \item \textbf{Dominio Tecnológico:} El prototipo se limitará a un único ecosistema (Java o.NET) para garantizar la profundidad técnica dentro del tiempo establecido..
-  \item \textbf{Reglas de Detección:} El análisis se enfocará en tres dimensiones: integridad de capas (ej. la capa de persistencia no debe llamar a la de presentación), ausencia de ciclos de dependencia y cumplimiento de convenciones de nomenclatura arquitectónica \parencite{NiessenMedium}.
-  \item \textbf{Entregables:} Un repositorio con el prototipo funcional, un catálogo de reglas pre-configuradas y el informe final de investigación.
+  \item \textbf{Selección del caso de estudio y del ecosistema tecnológico:} el prototipo se implementará y probará sobre un único ecosistema tecnológico, Java o .NET, y sobre un solo sistema con código fuente disponible, arquitectura en capas y tamaño manejable dentro del tiempo definido para el proyecto. Para la ejecución se priorizará un sistema propio o de código abierto; si el caso de estudio pertenece a una entidad externa, su uso quedará condicionado a la autorización expresa correspondiente y a la restricción del análisis a información estructural necesaria para la investigación.
+  \item \textbf{Definición del catálogo de reglas:} se formalizarán reglas ejecutables para tres dimensiones de conformidad arquitectónica: integridad de capas, ausencia de ciclos de dependencia y control de concentración excesiva de dependencias salientes en componentes o paquetes.
+  \item \textbf{Construcción del prototipo:} se desarrollará un mecanismo capaz de inspeccionar el código fuente, extraer dependencias relevantes, construir un grafo estructural y ejecutar \textit{Fitness Functions} sobre dicho grafo.
+  \item \textbf{Clasificación de resultados:} el prototipo calculará una \textbf{Tasa de Conformidad (CR)} y utilizará umbrales operativos para interpretar si la arquitectura evaluada se encuentra en estado aceptable, en observación o no conforme.
+  \item \textbf{Ejecución del experimento:} se realizará una evaluación controlada sobre una versión base del sistema y sobre versiones alteradas con derivas inducidas, con el fin de observar variación en la CR, capacidad de detección y utilidad del reporte generado.
+  \item \textbf{Entregables:} el proyecto producirá un repositorio con el prototipo funcional, un catálogo documentado de reglas, la matriz de validación, la evidencia del experimento y el informe final de investigación.
+\end{itemize}
+
+\noindent\textbf{Fuera del alcance del proyecto}
+
+\begin{itemize}[label=*]
+  \item La reconstrucción completa de toda la arquitectura empresarial o de todos los atributos de calidad del sistema; el prototipo se limitará a las tres dimensiones de conformidad definidas.
+  \item El soporte simultáneo para múltiples ecosistemas tecnológicos o para repositorios heterogéneos dentro de una misma ejecución.
+  \item El análisis dinámico en tiempo de ejecución, la minería de trazas o la instrumentación del sistema en producción.
+  \item La corrección automática de las derivas detectadas; el proyecto se concentrará en detección, clasificación y evidencia para la toma de decisiones.
+  \item El despliegue del prototipo como producto listo para producción o su integración completa en una tubería CI/CD organizacional.
 \end{itemize}

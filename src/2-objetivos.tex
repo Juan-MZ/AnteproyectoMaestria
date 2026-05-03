@@ -2,15 +2,15 @@
 
 
 \subsection{Objetivo General}
-Desarrollar un mecanismo automatizado para la detección de derivas arquitectónicas, basado en grafos de dependencia y la ejecución de funciones de fitness, eliminando la dependencia de documentación externa para garantizar la integridad estructural en proyectos de software de PyMES.
+Desarrollar y evaluar experimentalmente un mecanismo automatizado para la detección de derivas arquitectónicas, basado en grafos de dependencia y en la ejecución de \textit{Fitness Functions}, que permita clasificar el estado de conformidad estructural de proyectos de software de PyMES sin depender de documentación externa.
 
 
 \subsection{Objetivos específicos}
 
 \begin{enumerate}
-    \item Definir un conjunto de Fitness Functions basadas en el análisis de smells arquitectonicos más comunes (acoplamiento eferente, ciclos y violación de capas) adaptadas a entornos de desarrollo ágil.
-    \item Implementar un componente de análisis estático que genere automáticamente grafos de dependencia y topologías de componentes a partir del código fuente y de archivos de configuración, usando una herramienta propietaria.
-    \item Construir un motor de validación que compare el grafo extraído con las reglas definidas, calculando una \textbf{Tasa de Conformidad (CR)} automatizada en ciertos aspectos definidos.
-    \item Evaluar el mecanismo en un proyecto en condiciones controladas, analizando su capacidad para identificar los smells arquitectonicos comunes y determinar su efectividad en proyectos de software de PyMES.
+    \item Definir un catálogo acotado de \textit{Fitness Functions} para tres familias de deriva arquitectónica relevantes en PyMES: violaciones de capas, ciclos de dependencia y concentración excesiva de dependencias salientes, dejando explícita la racionalidad de cada regla, su evidencia esperada y su criterio de incumplimiento.
+    \item Implementar un componente de análisis estático que genere automáticamente grafos de dependencia y topologías de componentes a partir del código fuente y de los archivos de configuración necesarios del sistema seleccionado.
+    \item Construir un motor de validación que compare el grafo extraído con las reglas definidas, calcule una \textbf{Tasa de Conformidad (CR)} y clasifique el resultado mediante umbrales operativos que permitan determinar cuándo la arquitectura está en estado aceptable, en observación o en condición no conforme.
+    \item Diseñar y ejecutar un experimento controlado sobre un caso de estudio, comparando una versión base con versiones que contengan derivas introducidas deliberadamente, para medir la capacidad del mecanismo de detectar desviaciones, clasificar correctamente el estado arquitectónico y generar evidencia útil para la toma de decisiones.
 
 \end{enumerate}
