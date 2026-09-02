@@ -32,4 +32,45 @@ La investigación actual presenta diversas estrategias para gestionar la integri
     \item \textbf{Modelos de reflexión:} \textcite{Murphy2001} introducen una base formal para comparar el modelo extraído del código con el modelo arquitectónico esperado. Este antecedente fundamenta el motor de validación y la noción de conformidad del proyecto. La diferencia es que aquí esa comparación se operacionaliza para un conjunto pequeño de reglas ejecutables y con una salida orientada a clasificar el estado arquitectónico mediante una CR comprensible.
 \end{itemize}
 
+El siguiente cuadro comparativo resume los aportes de cada antecedente y las brechas que subsisten respecto al presente proyecto, con el propósito de identificar con precisión el espacio de contribución que justifica su ejecución.
+
+\begin{table}[H]
+\caption{Comparación de antecedentes: aportes y brechas frente al presente proyecto}
+\label{tab:antecedentes}
+\footnotesize
+\begin{tabularx}{\linewidth}{p{3.0cm}XX}
+\toprule
+\textbf{Antecedente} & \textbf{Aportes al campo} & \textbf{Limitaciones / Brechas} \\
+\midrule
+\textbf{ArchUnit} \parencite{ArchUnit} &
+Valida que las reglas arquitectónicas pueden expresarse como verificaciones ejecutables sobre código Java. &
+Limitado a una biblioteca y un lenguaje; no produce clasificación por umbrales ni experimento controlado; no está orientado a PyMES. \\
+\midrule
+\textbf{ArchSync} \parencite{ArchSyncJAndres} &
+Confirma la sincronización arquitectura-código como problema real; usa trazas de comportamiento. &
+Requiere instrumentación del sistema en ejecución; mayor complejidad de adopción para equipos pequeños; no usa análisis estático puro. \\
+\midrule
+\textbf{Gestión de ATD en PyMES} \parencite{Hamed2023} &
+Evidencia que las PyMES necesitan mecanismos ligeros y automatizados; fundamenta el contexto del trabajo. &
+No provee artefacto técnico; no define reglas ejecutables ni métricas de conformidad estructural. \\
+\midrule
+\textbf{ATDI con ML} \parencite{SasAvgeriou} &
+Muestra que la deuda arquitectónica puede resumirse en un indicador interpretable usando aprendizaje automático. &
+Modelo de caja negra con baja trazabilidad; difícil adopción inicial en PyMES sin experiencia en ML. \\
+\midrule
+\textbf{Conformidad en CI/CD} \parencite{Klein2022} &
+Muestra el valor de la verificación continua integrada al flujo de desarrollo. &
+Centrado en pipelines maduros; no propone experimento controlado; asume contextos con mayor gobernanza formal. \\
+\midrule
+\textbf{Modelos de reflexión} \parencite{Murphy2001} &
+Base formal para comparar modelo extraído con modelo esperado; fundamenta el motor de validación. &
+Sin operacionalización para conjuntos acotados de reglas ejecutables ni clasificación por umbrales comprensibles. \\
+\midrule
+\textbf{Brecha consolidada} &
+\multicolumn{2}{>{\arraybackslash}p{\dimexpr\linewidth-3.0cm-4\tabcolsep\relax}}{%
+Ningún antecedente combina: (1) análisis estático exclusivo del código fuente, (2) grafo de dependencia + \textit{Fitness Functions}, (3) clasificación por Tasa de Conformidad (CR), (4) experimento controlado con criterios explícitos, y (5) orientación específica a PyMES sin documentación arquitectónica externa. Esta brecha justifica el presente trabajo.} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 En síntesis, los antecedentes confirman que el problema existe, que la automatización es viable y que las reglas ejecutables aportan valor. Lo que diferencia a este proyecto es su foco en PyMES, su dependencia exclusiva del código fuente como evidencia viva, su uso combinado de grafo estructural y \textit{Fitness Functions}, y la incorporación de un experimento controlado con criterios explícitos para determinar si el mecanismo realmente ayuda a distinguir entre una arquitectura aceptable y una arquitectura problemática.

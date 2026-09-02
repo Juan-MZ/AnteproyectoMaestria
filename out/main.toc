@@ -23,22 +23,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Antecedentes}{13}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Gestión y Mitigación de Riesgos Éticos}{15}{section.5}%
+\contentsline {section}{\numberline {5}Gestión y Mitigación de Riesgos Éticos}{17}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Metodología del proyecto}{17}{section.6}%
+\contentsline {section}{\numberline {6}Metodología del proyecto}{19}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Diseño metodológico}{18}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}Diseño metodológico}{19}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Fases de ejecución}{19}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Fases de ejecución}{20}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Técnicas e instrumentos de recolección y análisis}{20}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Técnicas e instrumentos de recolección y análisis}{22}{subsection.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Mecanismo de evaluación y demostración}{21}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.4}Mecanismo de evaluación y demostración}{22}{subsection.6.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Resultados esperados}{22}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.5}Resultados esperados}{23}{subsection.6.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}Criterios de cierre}{22}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.6}Criterios de cierre}{24}{subsection.6.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7}Criterios de éxito}{23}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.7}Criterios de éxito}{25}{subsection.6.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Cronograma}{23}{section.7}%
+\contentsline {section}{\numberline {7}Cronograma}{26}{section.7}%

@@ -4,10 +4,10 @@
     "latex-workshop.latex.outDir": "%DIR%/out",
     "latex-workshop.latex.recipes": [
         {
-            "name": "pdflatex -> bibtex -> pdflatex x2",
+            "name": "pdflatex -> biber -> pdflatex x2",
             "tools": [
                 "pdflatex",
-                "bibtex",
+                "biber",
                 "pdflatex",
                 "pdflatex"
             ]
@@ -36,7 +36,7 @@
             ]
         },
         {
-            "name": "bibtex",
+            "name": "biber",
             "command": "docker",
             "env": {},
             "args": [
@@ -44,8 +44,10 @@
                 "-v", "%DIR%:/workdir",
                 "-w", "/workdir",
                 "xucheng/texlive-full",
-                "bibtex",
-                "out/%DOCFILE%"
+                "biber",
+                "--input-directory=out",
+                "--output-directory=out",
+                "%DOCFILE%"
             ]
         }
     ],
